@@ -3,4 +3,4 @@ Projek ini adalah hasil kolaborasi belajar bersama anggota divisi website DEPTIC
 
 ### Anggota
  1. Miftahul Fauza Ridhoi
-
+ 2. Andhika Dwiky Pratama
