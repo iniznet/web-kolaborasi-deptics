@@ -6,4 +6,4 @@ Framework yang akan digunakan adalah laravel
 
 ### Anggota
  1. Miftahul Fauza Ridhoi
-
+ 2. Andhika Dwiky Pratama
