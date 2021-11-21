@@ -1,0 +1,32 @@
+.container-chat {
+    border: 1px solid black;
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.message-box {
+    border: 1px solid black;
+    background-color: #68e17f;
+    margin-top: 5px;
+    padding: 5px;
+    width: 50%;
+}
+
+.message-box:nth-child(odd) {
+    border: 1px solid black;
+    background-color: #68e17f;
+    margin-top: 5px;
+    padding: 5px;
+    width: 50%;
+}
+
+.message-box:nth-child(even) {
+    border: 1px solid black;
+    background-color: #74cfe9;
+    margin-top: 5px;
+    margin-left: auto;
+    padding: 5px;
+    width: 50%;
+}

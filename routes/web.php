@@ -19,5 +19,11 @@ Route::get('/', function () {
 });
 
 Route::get('/coba', [CobaController::class, 'index']);
-Route::get('/cobalogin', [CobaController::class, 'login']);
+Route::get('/cobaregister', function () {
+    return view('register');
+});
+Route::get('/cobalogin', function () {
+    return view('login');
+});
+Route::post('/prosesregister', [CobaController::class, 'prosesregister']);
 Route::post('/proseslogin', [CobaController::class, 'proseslogin']);

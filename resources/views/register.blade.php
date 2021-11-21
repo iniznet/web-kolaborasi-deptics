@@ -1,38 +1,35 @@
 @extends('templates.base')
 
-@section('title', 'Socialchat | Login')
+@section('title', 'Socialchat | Register')
 
 @section('content')
 <div class="container">
-    @if (session('status_register'))
-        <div class="mt-3 alert alert-success">{{ session('status_register') }}</div>
-    @endif
     <div class="mt-3">
-        <form action="{{ url('/proseslogin') }}" method="POST">
+        <form action="{{ url('/prosesregister') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Username</label>
                 <input type="text" name="username" id="username" class="form-control @error('username') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ old('username') }}">
-                <div class="invalid-feedback">
-                    @error('username')
-                        {{ $message }}
-                    @enderror
-                </div>
+                @error('username')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1" value="{{ old('password') }}">
-                <div class="invalid-feedback">
-                    @error('password')
-                        {{ $message }}
-                    @enderror
-                </div>
+                @error('password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember-me">
-                <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
+                <input type="password" name="konf_password" id="password" class="form-control @error('konf_password') is-invalid @enderror" id="exampleInputPassword1" value="{{ old('konf_password') }}">
+                @error('konf_password')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Daftar</button>
         </form>
     </div>
 </div>
